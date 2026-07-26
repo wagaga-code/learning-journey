@@ -1,0 +1,9 @@
+# 编译输出（不要提交到GitHub）
+out/
+target/
+*.class
+*.jar
+
+# IDE配置
+.idea/
+*.iml
