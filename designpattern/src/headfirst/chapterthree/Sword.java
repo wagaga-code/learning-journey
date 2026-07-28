@@ -13,6 +13,9 @@ public class Sword extends Weapon{
 
     @Override
     public int damage() {
+        if(durability==0){
+            return baseDamage/2;
+        }
         return baseDamage;
     }
 

@@ -8,6 +8,7 @@ package headfirst.chapterthree;
 public abstract class Weapon {
     protected int baseDamage;      //  protected：让子类能直接用
     protected String description;  //  protected：让子类能直接用
+    protected int durability=100;
 
     public Weapon(int baseDamage, String description) {
         this.baseDamage = baseDamage;
@@ -16,4 +17,5 @@ public abstract class Weapon {
 
     public abstract int damage();        // 强制子类实现
     public abstract String getDescription();
+
 }

@@ -14,12 +14,13 @@ public class FireEnchantmentDecorator extends WeaponDecorator{
 
     @Override
     public int damage() {
-        return weapon.baseDamage+5;
+        weapon.durability=weapon.durability-2;
+        return weapon.baseDamage=weapon.baseDamage+5;
     }
 
     @Override
     public String getDescription() {
-        return weapon.description+"»ðÑæ¸½Ä§";
+        return weapon.description=weapon.description+"»ðÑæ¸½Ä§";
     }
     public int getFireDamage() {
         return 5;

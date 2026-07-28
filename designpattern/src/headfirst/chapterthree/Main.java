@@ -14,11 +14,18 @@ public class Main {
 
         // 2. 用火焰附魔包住它
         FireEnchantmentDecorator fireSword = new FireEnchantmentDecorator(sword);
-
+        System.out.println("火焰附魔");
         // 3. 这里，装饰者 fireSword 的 decoratedWeapon 属性
         //    指向了那把原始的 Sword 对象。
         System.out.println(fireSword.damage());        // 输出 15
         System.out.println(fireSword.getDescription());// 输出 “铁剑，燃烧着火焰”
+        System.out.println();
+
+
+        BlessedEnchantmentDecorator blessed = new BlessedEnchantmentDecorator(fireSword);
+        System.out.println("圣光附魔");
+        System.out.println(blessed.damage());
+        System.out.println(blessed.getDescription());
 
         // 4. 如果要调用装饰者特有的方法，就用具体的装饰者引用
         System.out.println("火焰伤害值：" + fireSword.getFireDamage());  // 输出 5
